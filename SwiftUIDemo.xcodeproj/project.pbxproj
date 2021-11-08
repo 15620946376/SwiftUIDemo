@@ -258,6 +258,7 @@
 		88D694532700B251003E177C /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FF66C3812738CE1E001509DD /* DataFlow */,
 				88E4A89E271DB256007EB120 /* Views */,
 				88E4A897271DB06C007EB120 /* Utils */,
 				88E4A888271DB04B007EB120 /* Model */,
@@ -267,8 +268,6 @@
 				88D694582700B252003E177C /* Assets.xcassets */,
 				88D6945A2700B252003E177C /* Preview Content */,
 				888CE1A82731805A0039F8BE /* MainApp.swift */,
-				888CE1AA273182D90039F8BE /* AppState.swift */,
-				888CE1AC273182E90039F8BE /* Store.swift */,
 			);
 			path = SwiftUIDemo;
 			sourceTree = "<group>";
@@ -443,6 +442,15 @@
 				888CE1A627317FDF0039F8BE /* SettingRootView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FF66C3812738CE1E001509DD /* DataFlow */ = {
+			isa = PBXGroup;
+			children = (
+				888CE1AA273182D90039F8BE /* AppState.swift */,
+				888CE1AC273182E90039F8BE /* Store.swift */,
+			);
+			path = DataFlow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

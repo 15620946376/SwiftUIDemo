@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    
     @State private var enableAnimation = false
     
     var body: some View {
