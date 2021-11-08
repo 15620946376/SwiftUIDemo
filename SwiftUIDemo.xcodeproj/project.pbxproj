@@ -100,6 +100,7 @@
 		FF66C3852738D68B001509DD /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66C3842738D68B001509DD /* LoginRequest.swift */; };
 		FF66C3872738D778001509DD /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66C3862738D778001509DD /* AppError.swift */; };
 		FF66C3892738D821001509DD /* AppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66C3882738D821001509DD /* AppCommand.swift */; };
+		FFF1A8F527393F3200E0F8F2 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1A8F427393F3200E0F8F2 /* FileStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +217,7 @@
 		FF66C3842738D68B001509DD /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		FF66C3862738D778001509DD /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		FF66C3882738D821001509DD /* AppCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommand.swift; sourceTree = "<group>"; };
+		FFF1A8F427393F3200E0F8F2 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -461,6 +463,7 @@
 				FF66C3842738D68B001509DD /* LoginRequest.swift */,
 				FF66C3862738D778001509DD /* AppError.swift */,
 				FF66C3882738D821001509DD /* AppCommand.swift */,
+				FFF1A8F427393F3200E0F8F2 /* FileStorage.swift */,
 			);
 			path = DataFlow;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 			files = (
 				88E4A895271DB04B007EB120 /* Pokemon.swift in Sources */,
 				88D694572700B251003E177C /* ContentView.swift in Sources */,
+				FFF1A8F527393F3200E0F8F2 /* FileStorage.swift in Sources */,
 				888CE1A92731805A0039F8BE /* MainApp.swift in Sources */,
 				88E4A893271DB04B007EB120 /* Language.swift in Sources */,
 				88D694552700B251003E177C /* SwiftUIDemoApp.swift in Sources */,

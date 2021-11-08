@@ -52,6 +52,7 @@ extension AppState {
         var email = ""
         var password = ""
         var verifyPassword = ""
+        @FileStorage(directory: .documentDirectory, fileName: "user.json")
         var loginUser: User?
         var loginRequesting = false
         var loginError: AppError?
@@ -59,7 +60,7 @@ extension AppState {
 }
 
 
-struct User {
+struct User: Codable {
     var email: String
     var favoritePokemonIDs: Set<Int>
     
