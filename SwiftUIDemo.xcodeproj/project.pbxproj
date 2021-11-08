@@ -96,6 +96,10 @@
 		88E4A89D271DB06C007EB120 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4A89A271DB06C007EB120 /* Helpers.swift */; };
 		88E4A8A0271DB278007EB120 /* PokemonInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4A89F271DB278007EB120 /* PokemonInfoRow.swift */; };
 		88E5ACD82721B17A00D25C22 /* PokemonInfoPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5ACD72721B17A00D25C22 /* PokemonInfoPanel.swift */; };
+		FF66C3832738D1D5001509DD /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66C3822738D1D5001509DD /* AppAction.swift */; };
+		FF66C3852738D68B001509DD /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66C3842738D68B001509DD /* LoginRequest.swift */; };
+		FF66C3872738D778001509DD /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66C3862738D778001509DD /* AppError.swift */; };
+		FF66C3892738D821001509DD /* AppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66C3882738D821001509DD /* AppCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +212,10 @@
 		88E4A89A271DB06C007EB120 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		88E4A89F271DB278007EB120 /* PokemonInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoRow.swift; sourceTree = "<group>"; };
 		88E5ACD72721B17A00D25C22 /* PokemonInfoPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoPanel.swift; sourceTree = "<group>"; };
+		FF66C3822738D1D5001509DD /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		FF66C3842738D68B001509DD /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		FF66C3862738D778001509DD /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		FF66C3882738D821001509DD /* AppCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -449,6 +457,10 @@
 			children = (
 				888CE1AA273182D90039F8BE /* AppState.swift */,
 				888CE1AC273182E90039F8BE /* Store.swift */,
+				FF66C3822738D1D5001509DD /* AppAction.swift */,
+				FF66C3842738D68B001509DD /* LoginRequest.swift */,
+				FF66C3862738D778001509DD /* AppError.swift */,
+				FF66C3882738D821001509DD /* AppCommand.swift */,
 			);
 			path = DataFlow;
 			sourceTree = "<group>";
@@ -651,6 +663,7 @@
 				88E4A893271DB04B007EB120 /* Language.swift in Sources */,
 				88D694552700B251003E177C /* SwiftUIDemoApp.swift in Sources */,
 				8871C41B271F0E2400A588EA /* PokemonList.swift in Sources */,
+				FF66C3832738D1D5001509DD /* AppAction.swift in Sources */,
 				88E4A89D271DB06C007EB120 /* Helpers.swift in Sources */,
 				88E5ACD82721B17A00D25C22 /* PokemonInfoPanel.swift in Sources */,
 				88E4A896271DB04B007EB120 /* PokemonSpecies.swift in Sources */,
@@ -659,12 +672,15 @@
 				888FA9AC27250AD200EB4562 /* SettingView.swift in Sources */,
 				888FA9AA2725076C00EB4562 /* BlurView.swift in Sources */,
 				88E4A89B271DB06C007EB120 /* FileHelper.swift in Sources */,
+				FF66C3852738D68B001509DD /* LoginRequest.swift in Sources */,
 				888CE1A527317FA10039F8BE /* PokemonRootView.swift in Sources */,
+				FF66C3872738D778001509DD /* AppError.swift in Sources */,
 				88E4A8A0271DB278007EB120 /* PokemonInfoRow.swift in Sources */,
 				888CE1A727317FDF0039F8BE /* SettingRootView.swift in Sources */,
 				888CE1AD273182E90039F8BE /* Store.swift in Sources */,
 				888FA9A82724E71400EB4562 /* PokemonInfoPanelAbilityList.swift in Sources */,
 				88E4A892271DB04B007EB120 /* PokemonViewModel.swift in Sources */,
+				FF66C3892738D821001509DD /* AppCommand.swift in Sources */,
 				88E4A894271DB04B007EB120 /* Ability.swift in Sources */,
 				88E4A891271DB04B007EB120 /* AbilityViewModel.swift in Sources */,
 			);

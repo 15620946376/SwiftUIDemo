@@ -52,5 +52,18 @@ extension AppState {
         var email = ""
         var password = ""
         var verifyPassword = ""
+        var loginUser: User?
+        var loginRequesting = false
+        var loginError: AppError?
+    }
+}
+
+
+struct User {
+    var email: String
+    var favoritePokemonIDs: Set<Int>
+    
+    func isFavoritePokemon(id: Int) -> Bool {
+        favoritePokemonIDs.contains(id)
     }
 }
