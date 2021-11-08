@@ -32,8 +32,12 @@ struct SettingView: View {
         Section("账户") {
             if let user = settings.loginUser {
                 Text(user.email)
-                Button("注销") {
-                    print("注销")
+                if settings.loginRequesting {
+                    Text("注销中...")
+                } else {
+                    Button("注销") {
+                        store.dispatch(.logout)
+                    }
                 }
             } else {
                 Picker("", selection: settingsBinding.accountBehavior) {

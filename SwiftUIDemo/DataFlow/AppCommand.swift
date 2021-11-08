@@ -35,6 +35,23 @@ struct LoginAppCommand: AppCommand {
     }
 }
 
+struct LogoutAppCommand: AppCommand {
+    let token = SubscriptionToken()
+    func execute(in store: Store) {
+        LogoutRequest()
+            .publisher
+            .sink(
+                receiveCompletion: { complete in
+                    store.dispatch(.logoutDone)
+                },
+                receiveValue: { value in
+                    
+                }
+            )
+            .seal(in: token)
+    }
+}
+
 
 class SubscriptionToken {
     var cancellable: AnyCancellable?

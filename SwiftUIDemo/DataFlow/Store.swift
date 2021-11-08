@@ -27,6 +27,7 @@ class Store: ObservableObject {
     static func reduce(state: AppState, action: AppAction) -> (AppState, AppCommand?) {
         var appState = state
         var appCommand: AppCommand?
+        
         switch action {
         case .login(let email, let password):
             guard appState.settings.loginRequesting == false else {
@@ -42,6 +43,15 @@ class Store: ObservableObject {
             case .failure(let error):
                 appState.settings.loginError = error
             }
+        case .logout:
+            guard appState.settings.logoutRequesting == false else {
+                break
+            }
+            appState.settings.logoutRequesting = true
+            appCommand = LogoutAppCommand()
+        case .logoutDone:
+            appState.settings.logoutRequesting = false
+            appState.settings.loginUser = nil
         }
         return (appState, appCommand)
     }

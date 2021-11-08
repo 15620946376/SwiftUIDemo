@@ -26,3 +26,16 @@ struct LoginRequest {
         .eraseToAnyPublisher()
     }
 }
+
+
+struct LogoutRequest {
+    var publisher: AnyPublisher<Bool, AppError> {
+        Future { promise in
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+                promise(.success(true))
+            }
+        }
+        .receive(on: DispatchQueue.main)
+        .eraseToAnyPublisher()
+    }
+}
