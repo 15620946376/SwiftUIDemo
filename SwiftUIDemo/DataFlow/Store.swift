@@ -10,6 +10,18 @@ import Combine
 class Store: ObservableObject {
     @Published var appState = AppState()
     
+    var disposeBag = [AnyCancellable]()
+    
+    init() {
+        setupObservers()
+    }
+    
+    func setupObservers() {
+        appState.settings.checker.isEmailValid.sink { value in
+            self.dispatch(.emailValid(valid: value))
+        }.store(in: &disposeBag)
+    }
+    
     func dispatch(_ action: AppAction) {
         #if DEBUG
         print("[Action]:\(action)")
@@ -52,6 +64,8 @@ class Store: ObservableObject {
         case .logoutDone:
             appState.settings.logoutRequesting = false
             appState.settings.loginUser = nil
+        case .emailValid(let valid):
+            appState.settings.isEmailValid = valid
         }
         return (appState, appCommand)
     }

@@ -32,7 +32,7 @@ struct SettingView: View {
         Section("账户") {
             if let user = settings.loginUser {
                 Text(user.email)
-                if settings.loginRequesting {
+                if settings.logoutRequesting {
                     Text("注销中...")
                 } else {
                     Button("注销") {
@@ -40,25 +40,26 @@ struct SettingView: View {
                     }
                 }
             } else {
-                Picker("", selection: settingsBinding.accountBehavior) {
+                Picker("", selection: settingsBinding.checker.accountBehavior) {
                     ForEach(AppState.Settings.AccountBehavior.allCases, id: \.self) {
                         Text($0.text)
                     }
                 }
                 .pickerStyle(.segmented)
-                TextField("电子邮箱", text: settingsBinding.email)
-                SecureField("密码", text: settingsBinding.password)
+                TextField("电子邮箱", text: settingsBinding.checker.email)
+                    .foregroundColor(settings.isEmailValid ? .green : .red)
+                SecureField("密码", text: settingsBinding.checker.password)
                 
-                if settings.accountBehavior == .register {
-                    SecureField("确认密码", text: settingsBinding.verifyPassword)
+                if settings.checker.accountBehavior == .register {
+                    SecureField("确认密码", text: settingsBinding.checker.verifyPassword)
                 }
                 
                 if settings.loginRequesting {
                     Text("登录中...")
                 } else {
-                    Button(settings.accountBehavior.text) {
+                    Button(settings.checker.accountBehavior.text) {
                         store.dispatch(
-                            .login(email: settings.email, password: settings.password)
+                            .login(email: settings.checker.email, password: settings.checker.password)
                         )
                     }
                 }

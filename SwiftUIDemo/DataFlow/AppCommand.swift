@@ -36,13 +36,15 @@ struct LoginAppCommand: AppCommand {
 }
 
 struct LogoutAppCommand: AppCommand {
-    let token = SubscriptionToken()
+    
     func execute(in store: Store) {
+        let token = SubscriptionToken()
         LogoutRequest()
             .publisher
             .sink(
                 receiveCompletion: { complete in
                     store.dispatch(.logoutDone)
+                    token.unseal()
                 },
                 receiveValue: { value in
                     

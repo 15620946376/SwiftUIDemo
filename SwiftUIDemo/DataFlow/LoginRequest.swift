@@ -39,3 +39,21 @@ struct LogoutRequest {
         .eraseToAnyPublisher()
     }
 }
+
+struct EmailRequest {
+    let email: String
+    
+    var publisher: AnyPublisher<Bool, Never> {
+        Future { promise in
+            DispatchQueue.global().asyncAfter(deadline: .now() + 0.5) {
+                if self.email.lowercased() == "111@163.com" {
+                    promise(.success(false))
+                } else {
+                    promise(.success(true))
+                }
+            }
+        }
+        .receive(on: DispatchQueue.main)
+        .eraseToAnyPublisher()
+    }
+}
