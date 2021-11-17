@@ -12,7 +12,6 @@ struct SwiftUIDemoApp: App {
     var body: some Scene {
         WindowGroup {
             MainApp()
-                .environmentObject(Store())
         }
     }
 }

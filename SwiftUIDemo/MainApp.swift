@@ -9,18 +9,7 @@ import SwiftUI
 
 struct MainApp: View {
     var body: some View {
-        TabView {
-            PokemonRootView()
-                .tabItem {
-                    Image(systemName: "list.bullet.below.rectangle")
-                    Text("列表")
-                }
-            SettingRootView()
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("设置")
-                }
-        }
+        ContentView()
     }
 }
 
